@@ -1,0 +1,151 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "title": "Finding Inner Peace Through Meditation",
+      "description": "Learn ancient meditation techniques to cultivate inner peace and harmony in daily life.",
+      "instructor": "Master Rajesh Kumar",
+      "category": "Meditation",
+      "difficulty": "Beginner",
+      "duration": "28:45",
+      "thumbnail": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=250&fit=crop",
+      "videoUrl": "https://www.youtube.com/embed/your-video-id",
+      "views": "15.2K",
+      "rating": 4.8,
+      "tags": ["meditation", "peace", "mindfulness"],
+      "publishDate": "2024-05-15",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Unity in Diversity - Embracing All Faiths",
+      "description": "Understanding how different spiritual paths lead to the same divine truth and universal love.",
+      "instructor": "Sister Maria Santos",
+      "category": "Unity",
+      "difficulty": "Intermediate",
+      "duration": "22:18",
+      "thumbnail": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop",
+      "videoUrl": "https://www.youtube.com/embed/your-video-id-2",
+      "views": "12.8K",
+      "rating": 4.9,
+      "tags": ["unity", "interfaith", "love"],
+      "publishDate": "2024-05-10"
+    },
+    {
+      "id": 3,
+      "title": "Compassionate Service to Humanity",
+      "description": "How acts of selfless service become a path to spiritual growth and world healing.",
+      "instructor": "Dr. Ahmed Hassan",
+      "category": "Service",
+      "difficulty": "All Levels",
+      "duration": "35:12",
+      "thumbnail": "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=400&h=250&fit=crop",
+      "videoUrl": "https://www.youtube.com/embed/your-video-id-3",
+      "views": "18.5K",
+      "rating": 5.0,
+      "tags": ["service", "compassion", "humanity"],
+      "publishDate": "2024-05-08",
+      "featured": true
+    }
+  ],
+  "articles": [
+    {
+      "id": 4,
+      "title": "The Sacred Thread of Universal Love",
+      "excerpt": "Exploring the invisible bonds that connect all beings across cultures, religions, and backgrounds.",
+      "author": "Lama Tenzin Norbu",
+      "category": "Philosophy",
+      "readTime": "12 min read",
+      "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=250&fit=crop",
+      "content": "In the grand tapestry of existence, there flows an invisible thread that connects every heart, every soul, every being across the vastness of creation. This sacred thread is love - not the conditional love we often experience, but the pure, unconditional love that forms the very fabric of the universe...",
+      "publishDate": "2024-05-12",
+      "views": "8.3K",
+      "rating": 4.7,
+      "tags": ["love", "unity", "philosophy"]
+    },
+    {
+      "id": 5,
+      "title": "Healing Through Forgiveness",
+      "excerpt": "The transformative power of forgiveness in personal healing and global peace.",
+      "author": "Rev. Sarah Thompson",
+      "category": "Healing",
+      "readTime": "8 min read",
+      "image": "https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=400&h=250&fit=crop",
+      "content": "Forgiveness is perhaps the most radical act of love we can perform. It is not about condoning harmful actions or forgetting painful experiences. True forgiveness is about freeing ourselves from the chains of resentment and opening our hearts to healing...",
+      "publishDate": "2024-05-09",
+      "views": "6.7K",
+      "rating": 4.8,
+      "tags": ["forgiveness", "healing", "peace"]
+    },
+    {
+      "id": 6,
+      "title": "The Practice of Daily Gratitude",
+      "excerpt": "Simple practices to cultivate an attitude of gratitude that transforms your perspective on life.",
+      "author": "Brother Michael Chen",
+      "category": "Practice",
+      "readTime": "6 min read",
+      "image": "https://images.unsplash.com/photo-1507692049790-de58290a4334?w=400&h=250&fit=crop",
+      "content": "Gratitude is not merely a feeling - it is a practice, a discipline, a way of seeing the world that can transform our entire experience of life. When we cultivate genuine gratitude, we begin to see abundance where we once saw lack...",
+      "publishDate": "2024-05-06",
+      "views": "9.1K",
+      "rating": 4.6,
+      "tags": ["gratitude", "practice", "mindfulness"]
+    }
+  ],
+  "resources": [
+    {
+      "id": 7,
+      "title": "Daily Peace Meditation Guide",
+      "description": "A comprehensive 30-day meditation program designed to cultivate inner peace and spiritual awareness.",
+      "type": "PDF",
+      "size": "2.4 MB",
+      "category": "Practice",
+      "downloads": "4.2K",
+      "image": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=400&h=250&fit=crop",
+      "downloadUrl": "/resources/daily-peace-meditation.pdf",
+      "publishDate": "2024-05-14",
+      "rating": 4.9,
+      "tags": ["meditation", "guide", "practice"]
+    },
+    {
+      "id": 8,
+      "title": "Interfaith Prayer Collection",
+      "description": "Beautiful prayers from various spiritual traditions promoting unity, peace, and universal love.",
+      "type": "PDF",
+      "size": "1.8 MB",  
+      "category": "Prayer",
+      "downloads": "3.6K",
+      "image": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=250&fit=crop",
+      "downloadUrl": "/resources/interfaith-prayers.pdf",
+      "publishDate": "2024-05-11",
+      "rating": 4.8,
+      "tags": ["prayer", "interfaith", "unity"]
+    },
+    {
+      "id": 9,
+      "title": "Healing Mantras Audio Collection",
+      "description": "Sacred mantras and chants from various traditions for healing, peace, and spiritual upliftment.",
+      "type": "Audio (MP3)",
+      "size": "85.3 MB",
+      "category": "Music",
+      "downloads": "2.9K",
+      "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop",
+      "downloadUrl": "/resources/healing-mantras.zip",
+      "publishDate": "2024-05-07",
+      "rating": 4.7,
+      "tags": ["mantras", "healing", "music"]
+    }
+  ],
+  "categories": [
+    "Meditation",
+    "Unity", 
+    "Service",
+    "Philosophy",
+    "Healing",
+    "Practice",
+    "Prayer",
+    "Music"
+  ],
+  "featured" :[1, 3, 4, 7]
+}
+

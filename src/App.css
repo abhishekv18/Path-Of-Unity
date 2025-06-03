@@ -1,0 +1,297 @@
+/* App.css - Beautiful Spiritual Styles */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* CSS Variables for Beautiful Colors */
+:root {
+  --divine-gold: #D4AF37;
+  --peace-blue: #4A90E2;
+  --unity-purple: #8B5CF6;
+  --love-rose: #F472B6;
+  --earth-green: #10B981;
+  --pure-white: #FFFFFF;
+  --soft-cream: #FEF7ED;
+  --deep-navy: #1E293B;
+  --light-gray: #F8FAFC;
+  --warm-gray: #64748B;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--deep-navy);
+  overflow-x: hidden;
+}
+
+/* Beautiful Typography */
+.font-spiritual {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-modern {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom Utility Classes */
+.text-divine-gold { color: var(--divine-gold); }
+.text-peace-blue { color: var(--peace-blue); }
+.text-unity-purple { color: var(--unity-purple); }
+.text-love-rose { color: var(--love-rose); }
+.text-earth-green { color: var(--earth-green); }
+.text-soft-cream { color: var(--soft-cream); }
+.text-deep-navy { color: var(--deep-navy); }
+
+.bg-divine-gold { background-color: var(--divine-gold); }
+.bg-peace-blue { background-color: var(--peace-blue); }
+.bg-unity-purple { background-color: var(--unity-purple); }
+.bg-love-rose { background-color: var(--love-rose); }
+.bg-earth-green { background-color: var(--earth-green); }
+.bg-soft-cream { background-color: var(--soft-cream); }
+
+/* Beautiful Gradients */
+.gradient-heaven {
+  background: linear-gradient(135deg, var(--divine-gold), var(--unity-purple), var(--peace-blue));
+}
+
+.gradient-unity {
+  background: linear-gradient(135deg, var(--love-rose), var(--unity-purple), var(--peace-blue));
+}
+
+.gradient-peace {
+  background: linear-gradient(135deg, var(--soft-cream), var(--peace-blue), var(--unity-purple));
+}
+
+/* Glass Morphism Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Beautiful Animations */
+@keyframes divine-glow {
+  0%, 100% { 
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.8), 0 0 40px rgba(212, 175, 55, 0.4);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes peaceful-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(1deg); }
+  66% { transform: translateY(-5px) rotate(-1deg); }
+}
+
+@keyframes prayer-ripple {
+  0% { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+  100% { 
+    transform: scale(2.5); 
+    opacity: 0; 
+  }
+}
+
+@keyframes candle-flicker {
+  0%, 100% { transform: scale(1) rotate(-1deg); }
+  50% { transform: scale(1.1) rotate(1deg); }
+}
+
+@keyframes text-shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation Classes */
+.animate-divine-glow {
+  animation: divine-glow 3s ease-in-out infinite;
+}
+
+.animate-peaceful-float {
+  animation: peaceful-float 4s ease-in-out infinite;
+}
+
+.animate-prayer-ripple {
+  animation: prayer-ripple 2s ease-out;
+}
+
+.animate-candle-flicker {
+  animation: candle-flicker 2s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.8s ease-out forwards;
+}
+
+/* Text Effects */
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--divine-gold) 25%,
+    var(--unity-purple) 50%,
+    var(--divine-gold) 75%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-shimmer 3s linear infinite;
+}
+
+/* Beautiful Buttons */
+.btn-spiritual {
+  @apply px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105;
+  background: linear-gradient(135deg, var(--divine-gold), var(--unity-purple));
+  color: white;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-spiritual:hover {
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.btn-outline-spiritual {
+  @apply px-8 py-4 rounded-full font-semibold border-2 transition-all duration-300;
+  border-color: var(--divine-gold);
+  color: var(--divine-gold);
+  background: transparent;
+}
+
+.btn-outline-spiritual:hover {
+  background: var(--divine-gold);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+/* Card Styles */
+.card-spiritual {
+  @apply bg-white rounded-2xl shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl;
+  transform: translateY(0);
+}
+
+.card-spiritual:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+}
+
+/* Scroll Animations */
+.scroll-fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .font-spiritual {
+    font-size: 0.9em;
+  }
+  
+  .btn-spiritual,
+  .btn-outline-spiritual {
+    @apply px-6 py-3 text-sm;
+  }
+  
+  .card-spiritual {
+    @apply mx-4;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--soft-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--divine-gold), var(--unity-purple));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(var(--unity-purple), var(--divine-gold));
+}
+
+/* Loading States */
+.loading-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: text-shimmer 1.5s infinite;
+}
+
+/* Focus States for Accessibility */
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--divine-gold);
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none;
+  }
+}
+

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  <script>
+
+    // Add this script to your HTML head or as a useEffect in React
+// This is the most effective JavaScript solution
+
+function removeGoogleTranslateBar() {
+  // All possible selectors for the translate bar
+  const selectors = [
+    '.goog-te-banner-frame',
+    'iframe.goog-te-banner-frame',
+    'iframe[name="goog-te-banner-frame"]',
+    '.skiptranslate.goog-te-banner-frame',
+    '[id*="goog-te-banner"]',
+    '[class*="goog-te-banner"]',
+    'body > .skiptranslate',
+    'iframe[src*="translate"]'
+  ];
+
+  // Remove all translate bar elements
+  selectors.forEach(selector => {
+    const elements = document.querySelectorAll(selector);
+    elements.forEach(element => {
+      element.remove(); // Completely remove from DOM
+    });
+  });
+
+  // Reset body positioning
+  document.body.style.top = '0';
+  document.body.style.marginTop = '0';
+  document.body.style.paddingTop = '0';
+  document.body.style.position = 'static';
+  document.body.style.transform = 'none';
+
+  // Reset html positioning
+  document.documentElement.style.marginTop = '0';
+  document.documentElement.style.paddingTop = '0';
+
+  // Remove classes that Google Translate adds
+  document.body.classList.remove('translated-ltr', 'translated-rtl', 'goog-te-enabled');
+  document.documentElement.classList.remove('translated-ltr', 'translated-rtl');
+}
+
+// Run the function multiple times to catch dynamically loaded content
+function initTranslateBarRemoval() {
+  // Remove immediately
+  removeGoogleTranslateBar();
+
+  // Remove after DOM is loaded
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', removeGoogleTranslateBar);
+  }
+
+  // Remove after window loads
+  window.addEventListener('load', () => {
+    setTimeout(removeGoogleTranslateBar, 100);
+    setTimeout(removeGoogleTranslateBar, 500);
+    setTimeout(removeGoogleTranslateBar, 1000);
+  });
+
+  // Use MutationObserver to catch dynamically added elements
+  const observer = new MutationObserver(function(mutations) {
+    let shouldRemove = false;
+    
+    mutations.forEach(function(mutation) {
+      if (mutation.type === 'childList') {
+        mutation.addedNodes.forEach(function(node) {
+          if (node.nodeType === 1) { // Element node
+            // Check if it's a translate bar element
+            if (node.className && node.className.includes('goog-te-banner')) {
+              shouldRemove = true;
+            }
+            if (node.tagName === 'IFRAME' && (
+              node.name === 'goog-te-banner-frame' || 
+              node.className.includes('goog-te-banner')
+            )) {
+              shouldRemove = true;
+            }
+            // Check for class changes on body
+            if (node === document.body && (
+              node.className.includes('translated-') ||
+              node.className.includes('goog-te-')
+            )) {
+              shouldRemove = true;
+            }
+          }
+        });
+      }
+      
+      // Check for attribute changes on body
+      if (mutation.type === 'attributes' && mutation.target === document.body) {
+        if (mutation.attributeName === 'style' || mutation.attributeName === 'class') {
+          shouldRemove = true;
+        }
+      }
+    });
+    
+    if (shouldRemove) {
+      setTimeout(removeGoogleTranslateBar, 10);
+    }
+  });
+
+  // Start observing
+  observer.observe(document, {
+    childList: true,
+    subtree: true,
+    attributes: true,
+    attributeFilter: ['style', 'class']
+  });
+
+  // Periodic check as fallback
+  setInterval(removeGoogleTranslateBar, 2000);
+}
+
+// Initialize the removal system
+initTranslateBarRemoval();
+
+// For React/Next.js - use this in a useEffect
+/*
+useEffect(() => {
+  initTranslateBarRemoval();
+}, []);
+*/
+
+// Alternative approach - Override Google Translate's CSS injection
+function preventTranslateStyling() {
+  // Override the CSS that Google Translate tries to inject
+  const style = document.createElement('style');
+  style.textContent = `
+    .goog-te-banner-frame {
+      display: none !important;
+      height: 0 !important;
+      width: 0 !important;
+    }
+    body {
+      top: 0 !important;
+      margin-top: 0 !important;
+      position: static !important;
+    }
+  `;
+  document.head.appendChild(style);
+}
+
+// Run prevention immediately
+preventTranslateStyling();
+    </script>
+  </head>
+ 
+  <body>
+    <div id="root"></div>
+
+  
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

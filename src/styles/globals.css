@@ -1,0 +1,141 @@
+/* NUCLEAR SOLUTION - Add this to your global.css */
+/* This is the most aggressive approach that actually works */
+
+/* Step 1: Hide ALL possible translate bar elements */
+.goog-te-banner-frame,
+.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame,
+iframe.goog-te-banner-frame.skiptranslate,
+iframe[name="goog-te-banner-frame"],
+iframe[id*="goog-te-banner"],
+div[id*="goog-te-banner"],
+.skiptranslate.goog-te-banner-frame,
+body > .skiptranslate {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  max-height: 0 !important;
+  max-width: 0 !important;
+  min-height: 0 !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  left: -99999px !important;
+  top: -99999px !important;
+  z-index: -99999 !important;
+  pointer-events: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  clip: rect(0, 0, 0, 0) !important;
+  transform: translateX(-100vw) !important;
+}
+
+/* Step 2: Force body positioning reset - CRITICAL */
+body {
+  top: 0 !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  position: static !important;
+  transform: none !important;
+}
+
+/* Step 3: Handle all body classes that Google Translate adds */
+body.translated-ltr,
+body.translated-rtl,
+body.goog-te-enabled {
+  top: 0 !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  position: static !important;
+  transform: none !important;
+}
+
+/* Step 4: Force html element positioning */
+html {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  position: static !important;
+}
+
+html.translated-ltr,
+html.translated-rtl {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Step 5: Your navbar must have these properties */
+/* Replace .your-navbar with your actual navbar class */
+.navbar,
+.nav,
+.header,
+.navigation,
+.top-bar,
+nav {
+  position: relative !important;
+  z-index: 99999 !important;
+  top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Step 6: Additional nuclear options */
+/* Hide any iframe that might be the translate bar */
+iframe[src*="translate"],
+iframe[src*="google"],
+iframe[name*="goog"] {
+  display: none !important;
+}
+
+/* Step 7: Prevent any space reservation */
+body > iframe:first-child,
+body > div:first-child[class*="goog"] {
+  display: none !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+/* Step 8: Force hide using attribute selectors */
+[class*="goog-te-banner"],
+[id*="goog-te-banner"],
+*[style*="translate"] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+/* Step 9: CSS content prevention */
+.skiptranslate::before,
+.skiptranslate::after,
+.goog-te-banner-frame::before,
+.goog-te-banner-frame::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Step 10: Final positioning fixes */
+* {
+  position: relative;
+}
+
+*[style*="position: absolute"][style*="top: 0"] {
+  display: none !important;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  body {
+    position: static !important;
+    top: 0 !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  .goog-te-banner-frame {
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+  }
+}
