@@ -205,7 +205,7 @@ import './styles/globals.css'; // Import global styles
 // Import your existing styles
 import './App.css';
 import ScrollToTop from './ScrollToTop';
-import BlogManagementPage from './pages/BlogManagment';
+
 import WhatsappFloatButton from './WhatsappFloatButton';
 
 
@@ -226,7 +226,7 @@ function App() {
             <Route path="/teachings" element={<TeachingsPage />} />
             <Route path="/prayers" element={<PrayerWallPage />} />
             <Route path="/events" element={<EventsPage />} />
-            <Route path="/admin/blogs" element={<BlogManagementPage />} />
+           
             <Route path="/contact" element={<ContactPage />} />
             
             {/* Additional Routes for specific sections */}

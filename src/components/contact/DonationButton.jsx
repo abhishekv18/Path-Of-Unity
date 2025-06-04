@@ -1,23 +1,25 @@
 
+
 // import React, { useState } from 'react';
-// import { HeartHandshake, Sparkles, Gift, Leaf, HandCoins } from 'lucide-react';
-// import { motion } from 'framer-motion';
+// import { HeartHandshake, Sparkles, Gift, Leaf, HandCoins, MessageCircle } from 'lucide-react';
 
 // const DonationButton = () => {
 //   const [isBlessingVisible, setIsBlessingVisible] = useState(false);
 //   const [isProcessing, setIsProcessing] = useState(false);
 
+//   // Replace with your WhatsApp number (include country code without + sign)
+//   const whatsappNumber = "+79776235749"; // Example: "919876543210" for Indian number
+//   const donationMessage = "Hello! I would like to make a donation to support your spiritual mission. Please guide me on how to proceed.";
+
 //   const handleDonateClick = () => {
 //     setIsProcessing(true);
 //     setIsBlessingVisible(true);
     
-//     // Simulate processing delay before redirecting
+//     // Simulate processing delay before redirecting to WhatsApp
 //     setTimeout(() => {
-//       // PayPal integration
-//       window.open(
-//         'https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID',
-//         '_blank'
-//       );
+//       // WhatsApp integration
+//       const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(donationMessage)}`;
+//       window.open(whatsappUrl, '_blank');
 //       setIsProcessing(false);
 //     }, 1500);
 //   };
@@ -25,54 +27,66 @@
 //   // Floating particles animation
 //   const FloatingParticle = ({ icon, initialX, initialY, size, duration }) => {
 //     return (
-//       <motion.div
+//       <div
 //         className="absolute text-purple-300 text-opacity-40"
-//         initial={{ x: initialX, y: initialY, rotate: -15, opacity: 0 }}
-//         animate={{
-//           x: initialX + 20,
-//           y: initialY + 20,
-//           rotate: [0, 45, 90, 135, 180],
-//           opacity: [0, 0.4, 0.6, 0.4, 0]
-//         }}
-//         transition={{
-//           duration: duration,
-//           repeat: Infinity,
-//           repeatType: "loop",
-//           ease: "linear"
+//         style={{
+//           animation: `float-${duration} ${duration}s infinite linear`,
+//           left: `${initialX}px`,
+//           top: `${initialY}px`,
 //         }}
 //       >
 //         {icon === 'sparkle' && <Sparkles size={size} />}
 //         {icon === 'heart' && <HeartHandshake size={size} />}
 //         {icon === 'leaf' && <Leaf size={size} />}
-//       </motion.div>
+//       </div>
 //     );
 //   };
 
 //   return (
-//     <motion.div 
-//       className="max-w-md mx-auto text-center p-4"
-//       initial={{ opacity: 0 }}
-//       animate={{ opacity: 1 }}
-//       transition={{ duration: 0.5 }}
-//     >
-//       <motion.h2 
-//         className="text-2xl md:text-3xl font-semibold text-purple-800 mb-4 md:mb-6"
-//         initial={{ y: -20 }}
-//         animate={{ y: 0 }}
-//         transition={{ duration: 0.4 }}
-//       >
+//     <div className="max-w-md mx-auto text-center p-4">
+//       <style jsx>{`
+//         @keyframes float-8 {
+//           0% { transform: translate(0, 0) rotate(-15deg); opacity: 0; }
+//           25% { transform: translate(5px, 5px) rotate(45deg); opacity: 0.4; }
+//           50% { transform: translate(10px, 10px) rotate(90deg); opacity: 0.6; }
+//           75% { transform: translate(15px, 15px) rotate(135deg); opacity: 0.4; }
+//           100% { transform: translate(20px, 20px) rotate(180deg); opacity: 0; }
+//         }
+//         @keyframes float-10 {
+//           0% { transform: translate(0, 0) rotate(-15deg); opacity: 0; }
+//           25% { transform: translate(5px, 5px) rotate(45deg); opacity: 0.4; }
+//           50% { transform: translate(10px, 10px) rotate(90deg); opacity: 0.6; }
+//           75% { transform: translate(15px, 15px) rotate(135deg); opacity: 0.4; }
+//           100% { transform: translate(20px, 20px) rotate(180deg); opacity: 0; }
+//         }
+//         @keyframes float-12 {
+//           0% { transform: translate(0, 0) rotate(-15deg); opacity: 0; }
+//           25% { transform: translate(5px, 5px) rotate(45deg); opacity: 0.4; }
+//           50% { transform: translate(10px, 10px) rotate(90deg); opacity: 0.6; }
+//           75% { transform: translate(15px, 15px) rotate(135deg); opacity: 0.4; }
+//           100% { transform: translate(20px, 20px) rotate(180deg); opacity: 0; }
+//         }
+//         @keyframes float-9 {
+//           0% { transform: translate(0, 0) rotate(-15deg); opacity: 0; }
+//           25% { transform: translate(5px, 5px) rotate(45deg); opacity: 0.4; }
+//           50% { transform: translate(10px, 10px) rotate(90deg); opacity: 0.6; }
+//           75% { transform: translate(15px, 15px) rotate(135deg); opacity: 0.4; }
+//           100% { transform: translate(20px, 20px) rotate(180deg); opacity: 0; }
+//         }
+//         @keyframes pulse-quote {
+//           0%, 100% { opacity: 0.7; }
+//           50% { opacity: 1; }
+//         }
+//       `}</style>
+      
+//       <h2 className="text-2xl md:text-3xl font-semibold text-purple-800 mb-4 md:mb-6">
 //         <span className="inline-flex items-center">
 //           Sacred Giving Circle
 //           <HeartHandshake className="ml-2 w-6 h-6 text-purple-600" />
 //         </span>
-//       </motion.h2>
+//       </h2>
       
-//       <motion.div 
-//         className="bg-gradient-to-br from-white to-purple-50 rounded-2xl p-6 md:p-8 shadow-lg border border-purple-100 relative overflow-hidden"
-//         initial={{ scale: 0.98 }}
-//         animate={{ scale: 1 }}
-//         transition={{ duration: 0.3 }}
-//       >
+//       <div className="bg-gradient-to-br from-white to-purple-50 rounded-2xl p-6 md:p-8 shadow-lg border border-purple-100 relative overflow-hidden">
 //         {/* Floating background elements */}
 //         <FloatingParticle icon="sparkle" initialX={10} initialY={20} size={16} duration={8} />
 //         <FloatingParticle icon="heart" initialX={80} initialY={40} size={14} duration={10} />
@@ -80,109 +94,69 @@
 //         <FloatingParticle icon="sparkle" initialX={70} initialY={10} size={12} duration={9} />
 
 //         <div className="relative z-10">
-//           <motion.div
-//             className="flex justify-center mb-4 md:mb-6"
-//             whileHover={{ scale: 1.05 }}
-//             transition={{ type: "spring", stiffness: 400 }}
-//           >
+//           <div className="flex justify-center mb-4 md:mb-6">
 //             <Gift className="w-12 h-12 text-purple-600" strokeWidth={1.5} />
-//           </motion.div>
+//           </div>
           
-//           <motion.p 
-//             className="text-purple-700 mb-5 md:mb-6 text-base md:text-lg leading-relaxed"
-//             initial={{ opacity: 0 }}
-//             animate={{ opacity: 1 }}
-//             transition={{ delay: 0.2 }}
-//           >
+//           <p className="text-purple-700 mb-5 md:mb-6 text-base md:text-lg leading-relaxed">
 //             Your <span className="font-medium text-purple-800">generous gift</span> sustains our spiritual mission and{" "}
 //             <span className="font-medium text-purple-800">spreads blessings</span> to those in need.
-//           </motion.p>
+//           </p>
           
-//           <motion.div
-//             initial={{ opacity: 0, y: 10 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             transition={{ delay: 0.3 }}
-//           >
-//             <motion.button
+//           <div>
+//             <button
 //               onClick={handleDonateClick}
 //               disabled={isProcessing}
-//               whileHover={{ 
-//                 scale: 1.02,
-//                 boxShadow: "0 10px 20px -5px rgba(124, 58, 237, 0.3)"
-//               }}
-//               whileTap={{ scale: 0.98 }}
-//               className={`w-full py-3 md:py-4 px-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium rounded-lg md:rounded-xl shadow-md transition-all duration-300 flex items-center justify-center space-x-2 relative overflow-hidden ${isProcessing ? 'opacity-90' : ''}`}
+//               className={`w-full py-3 md:py-4 px-6 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-medium rounded-lg md:rounded-xl shadow-md transition-all duration-300 flex items-center justify-center space-x-2 relative overflow-hidden transform hover:scale-105 hover:shadow-lg ${isProcessing ? 'opacity-90' : ''}`}
 //             >
 //               {isProcessing ? (
-//                 <motion.span 
-//                   className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"
-//                   transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-//                 />
+//                 <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
 //               ) : (
 //                 <>
-//                   <span>Donate with PayPal</span>
-//                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-//                     <path d="M10.13 12.19v.03c0 .06.02.13.04.19.06.27.18.52.36.73l-1.38.96c-.08.06-.13.16-.13.26v.31c0 .17.14.31.31.31h2.29c.12 0 .23-.05.31-.14l6.14-8.52c.05-.07.08-.16.08-.25v-.31c0-.17-.14-.31-.31-.31h-2.29c-.12 0-.23.05-.31.14l-4.29 5.97zm-1.38-3.89c-.06-.27-.18-.52-.36-.73l1.38-.96c.08-.06.13-.16.13-.26v-.31c0-.17-.14-.31-.31-.31H5.31c-.12 0-.23.05-.31.14L.08 12.52c-.05.07-.08.16-.08.25v.31c0 .17.14.31.31.31h2.29c.12 0 .23-.05.31-.14l4.29-5.97v-.03c0-.06-.02-.13-.04-.19zM20.5 7h-2.29c-.12 0-.23.05-.31.14l-4.29 5.97v.03c0 .06.02.13.04.19.06.27.18.52.36.73l-1.38.96c-.08.06-.13.16-.13.26v.31c0 .17.14.31.31.31h2.29c.12 0 .23-.05.31-.14l6.14-8.52c.05-.07.08-.16.08-.25v-.31c0-.17-.14-.31-.31-.31z"/>
-//                   </svg>
+//                   <span>Donate via WhatsApp</span>
+//                   <MessageCircle className="w-5 h-5" />
 //                 </>
 //               )}
-//             </motion.button>
-//           </motion.div>
+//             </button>
+//           </div>
           
 //           {isBlessingVisible && (
-//             <motion.div 
-//               className="mt-4 p-3 bg-green-50 text-green-700 rounded-lg border border-green-200 flex items-center justify-center space-x-2"
-//               initial={{ opacity: 0, height: 0 }}
-//               animate={{ opacity: 1, height: 'auto' }}
-//               exit={{ opacity: 0, height: 0 }}
-//               transition={{ duration: 0.3 }}
-//             >
+//             <div className="mt-4 p-3 bg-green-50 text-green-700 rounded-lg border border-green-200 flex items-center justify-center space-x-2 animate-pulse">
 //               <HandCoins className="text-green-600" />
 //               <span>Thank you for your sacred offering</span>
-//             </motion.div>
+//             </div>
 //           )}
 
-//           <motion.div 
-//             className="mt-4 md:mt-6 flex flex-wrap items-center justify-center gap-2 text-xs md:text-sm text-purple-400"
-//             initial={{ opacity: 0 }}
-//             animate={{ opacity: 1 }}
-//             transition={{ delay: 0.4 }}
-//           >
+//           <div className="mt-4 md:mt-6 flex flex-wrap items-center justify-center gap-2 text-xs md:text-sm text-purple-400">
 //             <div className="flex items-center">
 //               <svg className="w-3 h-3 mr-1 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
 //                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
 //               </svg>
-//               Secure payments
+//               Direct contact
 //             </div>
 //             <div className="flex items-center">
 //               <svg className="w-3 h-3 mr-1 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
 //                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
 //               </svg>
-//               Encrypted data
+//               Personal guidance
 //             </div>
 //             <div className="flex items-center">
 //               <svg className="w-3 h-3 mr-1 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
 //                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
 //               </svg>
-//               Tax deductible
+//               Blessed transaction
 //             </div>
-//           </motion.div>
+//           </div>
 //         </div>
-//       </motion.div>
+//       </div>
 
-//       <motion.div 
+//       <div 
 //         className="mt-4 text-purple-300 text-xs md:text-sm italic"
-//         animate={{ 
-//           opacity: [0.7, 1, 0.7],
-//         }}
-//         transition={{ 
-//           duration: 4,
-//           repeat: Infinity 
-//         }}
+//         style={{ animation: 'pulse-quote 4s infinite' }}
 //       >
 //         "Generosity is the seed of abundance"
-//       </motion.div>
-//     </motion.div>
+//       </div>
+//     </div>
 //   );
 // };
 
@@ -217,7 +191,7 @@ const DonationButton = () => {
   const FloatingParticle = ({ icon, initialX, initialY, size, duration }) => {
     return (
       <div
-        className="absolute text-purple-300 text-opacity-40"
+        className="absolute text-blue-300 text-opacity-40"
         style={{
           animation: `float-${duration} ${duration}s infinite linear`,
           left: `${initialX}px`,
@@ -266,34 +240,82 @@ const DonationButton = () => {
           0%, 100% { opacity: 0.7; }
           50% { opacity: 1; }
         }
+        @keyframes divine-glow {
+          0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+          50% { box-shadow: 0 0 30px rgba(251, 191, 36, 0.4); }
+        }
+        @keyframes sacred-pulse {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.02); }
+        }
       `}</style>
       
-      <h2 className="text-2xl md:text-3xl font-semibold text-purple-800 mb-4 md:mb-6">
+      <h2 className="text-2xl md:text-3xl font-semibold text-blue-800 mb-4 md:mb-6">
         <span className="inline-flex items-center">
           Sacred Giving Circle
-          <HeartHandshake className="ml-2 w-6 h-6 text-purple-600" />
+          <HeartHandshake className="ml-2 w-6 h-6 text-yellow-500" />
         </span>
       </h2>
       
-      <div className="bg-gradient-to-br from-white to-purple-50 rounded-2xl p-6 md:p-8 shadow-lg border border-purple-100 relative overflow-hidden">
+      <div 
+        className="bg-gradient-to-br from-white via-blue-50 to-yellow-50 rounded-2xl p-6 md:p-8 shadow-xl border-2 border-blue-100 relative overflow-hidden"
+        style={{ animation: 'divine-glow 4s infinite ease-in-out' }}
+      >
         {/* Floating background elements */}
         <FloatingParticle icon="sparkle" initialX={10} initialY={20} size={16} duration={8} />
         <FloatingParticle icon="heart" initialX={80} initialY={40} size={14} duration={10} />
         <FloatingParticle icon="leaf" initialX={30} initialY={70} size={18} duration={12} />
         <FloatingParticle icon="sparkle" initialX={70} initialY={10} size={12} duration={9} />
 
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="w-full h-full bg-gradient-to-r from-blue-600 via-yellow-400 to-blue-600"></div>
+        </div>
+
         <div className="relative z-10">
           <div className="flex justify-center mb-4 md:mb-6">
-            <Gift className="w-12 h-12 text-purple-600" strokeWidth={1.5} />
+            <div 
+              className="p-3 rounded-full bg-gradient-to-r from-blue-500 to-yellow-400 shadow-lg"
+              style={{ animation: 'sacred-pulse 3s infinite ease-in-out' }}
+            >
+              <Gift className="w-12 h-12 text-white" strokeWidth={1.5} />
+            </div>
           </div>
           
-          <p className="text-purple-700 mb-5 md:mb-6 text-base md:text-lg leading-relaxed">
-            Your <span className="font-medium text-purple-800">generous gift</span> sustains our spiritual mission and{" "}
-            <span className="font-medium text-purple-800">spreads blessings</span> to those in need.
+          <p className="text-blue-700 mb-5 md:mb-6 text-base md:text-lg leading-relaxed">
+            Your <span className="font-semibold text-yellow-600 bg-yellow-50 px-2 py-1 rounded">generous gift</span> sustains our spiritual mission and{" "}
+            <span className="font-semibold text-blue-800 bg-blue-50 px-2 py-1 rounded">spreads blessings</span> to those in need.
           </p>
           
           <div>
-            <button
+            {/* <button
+              onClick={handleDonateClick}
+              disabled={isProcessing}
+              className={`w-full py-3 md:py-4 px-6 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 hover:from-blue-700 hover:via-blue-800 hover:to-blue-900 text-white font-semibold rounded-lg md:rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 relative overflow-hidden transform hover:scale-105 hover:shadow-2xl border border-blue-500 ${isProcessing ? 'opacity-90' : ''}`}
+              style={{ 
+                backgroundImage: 'linear-gradient(45deg, #1e3a8a, #3b82f6, #fbbf24)',
+                backgroundSize: '200% 200%',
+                animation: isProcessing ? 'none' : 'gradient-shift 3s ease infinite'
+              }}
+            >
+              <style jsx>{`
+                @keyframes gradient-shift {
+                  0% { background-position: 0% 50%; }
+                  50% { background-position: 100% 50%; }
+                  100% { background-position: 0% 50%; }
+                }
+              `}</style>
+              
+              {isProcessing ? (
+                <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+              ) : (
+                <>
+                  <span>Donate via WhatsApp</span>
+                  <MessageCircle className="w-5 h-5" />
+                </>
+              )}
+            </button> */}
+              <button
               onClick={handleDonateClick}
               disabled={isProcessing}
               className={`w-full py-3 md:py-4 px-6 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-medium rounded-lg md:rounded-xl shadow-md transition-all duration-300 flex items-center justify-center space-x-2 relative overflow-hidden transform hover:scale-105 hover:shadow-lg ${isProcessing ? 'opacity-90' : ''}`}
@@ -310,27 +332,28 @@ const DonationButton = () => {
           </div>
           
           {isBlessingVisible && (
-            <div className="mt-4 p-3 bg-green-50 text-green-700 rounded-lg border border-green-200 flex items-center justify-center space-x-2 animate-pulse">
-              <HandCoins className="text-green-600" />
-              <span>Thank you for your sacred offering</span>
+            <div className="mt-4 p-4 bg-gradient-to-r from-yellow-50 to-blue-50 text-blue-700 rounded-lg border-2 border-yellow-300 flex items-center justify-center space-x-2 shadow-md">
+              <HandCoins className="text-yellow-600 w-5 h-5" />
+              <span className="font-medium">Thank you for your sacred offering</span>
+              <Sparkles className="text-yellow-500 w-4 h-4 animate-pulse" />
             </div>
           )}
 
-          <div className="mt-4 md:mt-6 flex flex-wrap items-center justify-center gap-2 text-xs md:text-sm text-purple-400">
-            <div className="flex items-center">
-              <svg className="w-3 h-3 mr-1 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
+          <div className="mt-4 md:mt-6 flex flex-wrap items-center justify-center gap-3 text-xs md:text-sm text-blue-600">
+            <div className="flex items-center bg-white rounded-full px-3 py-1 shadow-sm border border-blue-200">
+              <svg className="w-3 h-3 mr-1 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
               Direct contact
             </div>
-            <div className="flex items-center">
-              <svg className="w-3 h-3 mr-1 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
+            <div className="flex items-center bg-white rounded-full px-3 py-1 shadow-sm border border-blue-200">
+              <svg className="w-3 h-3 mr-1 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
               Personal guidance
             </div>
-            <div className="flex items-center">
-              <svg className="w-3 h-3 mr-1 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
+            <div className="flex items-center bg-white rounded-full px-3 py-1 shadow-sm border border-blue-200">
+              <svg className="w-3 h-3 mr-1 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
               Blessed transaction
@@ -340,7 +363,7 @@ const DonationButton = () => {
       </div>
 
       <div 
-        className="mt-4 text-purple-300 text-xs md:text-sm italic"
+        className="mt-4 text-blue-400 text-xs md:text-sm italic font-medium"
         style={{ animation: 'pulse-quote 4s infinite' }}
       >
         "Generosity is the seed of abundance"
