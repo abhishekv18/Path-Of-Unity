@@ -197,8 +197,11 @@ import Layout from './components/layout/Layout';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import TeachingsPage from './pages/TeachingsPage';
+
+
 import PrayerWallPage from './pages/PrayerWallPage';
 import EventsPage from './pages/EventsPage';
+
 import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
 import './styles/globals.css'; // Import global styles

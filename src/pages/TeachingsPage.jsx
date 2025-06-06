@@ -309,7 +309,7 @@ const TeachingsPage = () => {
   }
 
   return (
-    <div className="relative mt-8 md:mt-10 min-h-screen bg-gradient-to-br from-blue-50 via-white to-amber-50">
+    <div className="relative mt-6 md:mt-8 min-h-screen bg-gradient-to-br from-blue-50 via-white to-amber-50">
       {/* Floating Spiritual Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
         <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400 rounded-full animate-pulse opacity-60"></div>
@@ -357,9 +357,12 @@ const TeachingsPage = () => {
 
     {/* CTA Button */}
     <div className="animate-fade-in-delay-2">
-      <button className="px-8 py-3 bg-gradient-to-r from-amber-500 to-yellow-500 text-blue-900 font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:from-amber-400 hover:to-yellow-400 mb-12">
+      <Link to='/contact'>
+            <button className="px-8 py-3 bg-gradient-to-r from-amber-500 to-yellow-500 text-blue-900 font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:from-amber-400 hover:to-yellow-400 mb-12">
         Begin Your Journey
       </button>
+      </Link>
+
     </div>
 
     {/* Stats Row */}
