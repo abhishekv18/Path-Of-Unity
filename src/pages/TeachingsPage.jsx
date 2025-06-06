@@ -309,7 +309,7 @@ const TeachingsPage = () => {
   }
 
   return (
-    <div className="relative mt-14 md:mt-16 min-h-screen bg-gradient-to-br from-blue-50 via-white to-amber-50">
+    <div className="relative mt-8 md:mt-10 min-h-screen bg-gradient-to-br from-blue-50 via-white to-amber-50">
       {/* Floating Spiritual Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
         <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400 rounded-full animate-pulse opacity-60"></div>
@@ -320,53 +320,78 @@ const TeachingsPage = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-800 via-blue-700 to-blue-900 text-white py-20 px-4 z-10">
-        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-        
-        {/* Animated Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-20 h-20 border border-amber-300 rounded-full animate-spin-slow"></div>
-          <div className="absolute top-20 right-20 w-16 h-16 border border-amber-300 rounded-full animate-spin-reverse"></div>
-          <div className="absolute bottom-20 left-1/3 w-12 h-12 border border-amber-300 rounded-full animate-pulse"></div>
+      
+
+
+<section className="relative min-h-screen overflow-hidden bg-gradient-to-r from-blue-900/70 via-blue-800/70 to-blue-900/70 text-white py-16 px-4 z-10">
+  {/* Background Image with Overlay */}
+  <div className="absolute inset-0 z-0">
+    <img 
+      src="/images/buddhism-2214532_1920.jpg" 
+      alt="Sacred mountain landscape"
+      className="w-full h-full object-cover"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-800/80 to-blue-900/90"></div>
+  </div>
+  
+  {/* Animated Background Pattern */}
+  <div className="absolute inset-0 opacity-20 z-10">
+    <div className="absolute top-10 left-10 w-20 h-20 border-2 border-amber-300 rounded-full animate-spin-slow"></div>
+    <div className="absolute top-20 right-20 w-16 h-16 border-2 border-amber-300 rounded-full animate-spin-reverse"></div>
+    <div className="absolute bottom-20 left-1/3 w-12 h-12 border-2 border-amber-300 rounded-full animate-pulse"></div>
+    <div className="absolute bottom-1/4 right-1/4 w-14 h-14 border border-amber-200 rounded-full animate-ping opacity-30"></div>
+  </div>
+
+  <div className="relative max-w-6xl mx-auto text-center z-20 pt-32">
+    <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-amber-400 to-yellow-400 rounded-full mb-8 animate-pulse backdrop-blur-sm shadow-lg hover:scale-105 transition-transform duration-300">
+      <BookOpen className="w-10 h-10 text-blue-900" />
+    </div>
+    
+    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-amber-100 to-yellow-200 bg-clip-text text-transparent animate-fade-in font-serif tracking-tight">
+      Sacred Teachings
+    </h1>
+    
+    <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed mb-8 animate-fade-in-delay font-light">
+      Discover timeless wisdom and spiritual guidance to illuminate your path toward inner peace, unity, and divine understanding
+    </p>
+
+    {/* CTA Button */}
+    <div className="animate-fade-in-delay-2">
+      <button className="px-8 py-3 bg-gradient-to-r from-amber-500 to-yellow-500 text-blue-900 font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:from-amber-400 hover:to-yellow-400 mb-12">
+        Begin Your Journey
+      </button>
+    </div>
+
+    {/* Stats Row */}
+    <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 text-amber-200 animate-fade-in-delay-2 backdrop-blur-sm bg-white/10 rounded-full px-8 py-4 max-w-md mx-auto">
+      <div className="flex items-center space-x-2 group">
+        <div className="p-2 bg-amber-500/20 rounded-full group-hover:bg-amber-500/30 transition-colors">
+          <Video className="w-5 h-5" />
         </div>
-
-        <div className="relative max-w-6xl mx-auto text-center z-20">
-          <div className="inline-flex items-center justify-center w-20 h-18 bg-gradient-to-r from-amber-400 to-yellow-400 rounded-full mb-8 animate-pulse backdrop-blur-sm shadow-lg">
-            <BookOpen className="w-10 h-10 text-blue-900" />
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-amber-100 to-yellow-200 bg-clip-text text-transparent animate-fade-in font-serif">
-            Sacred Teachings
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed mb-8 animate-fade-in-delay font-light">
-            Discover timeless wisdom and spiritual guidance to illuminate your path toward inner peace, unity, and divine understanding
-          </p>
-
-          {/* Stats Row */}
-          <div className="flex justify-center items-center space-x-8 text-amber-200 animate-fade-in-delay-2">
-            <div className="flex items-center space-x-2">
-              <Video className="w-5 h-5" />
-              <span className="text-sm font-medium">Videos</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <BookOpen className="w-5 h-5" />
-              <span className="text-sm font-medium">Articles</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Download className="w-5 h-5" />
-              <span className="text-sm font-medium">Resources</span>
-            </div>
-          </div>
-
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 border-amber-300 rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-amber-300 rounded-full mt-2 animate-pulse"></div>
-            </div>
-          </div>
+        <span className="text-sm font-medium">250+ Videos</span>
+      </div>
+      <div className="flex items-center space-x-2 group">
+        <div className="p-2 bg-amber-500/20 rounded-full group-hover:bg-amber-500/30 transition-colors">
+          <BookOpen className="w-5 h-5" />
         </div>
-      </section>
+        <span className="text-sm font-medium">120+ Articles</span>
+      </div>
+      <div className="flex items-center space-x-2 group">
+        <div className="p-2 bg-amber-500/20 rounded-full group-hover:bg-amber-500/30 transition-colors">
+          <Download className="w-5 h-5" />
+        </div>
+        <span className="text-sm font-medium">Free Resources</span>
+      </div>
+    </div>
+
+    {/* Scroll Indicator */}
+    <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="w-6 h-10 border-2 border-amber-300 rounded-full flex justify-center hover:border-amber-200 transition-colors cursor-pointer">
+        <div className="w-1 h-3 bg-amber-300 rounded-full mt-2 animate-pulse"></div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Inspirational Quote Section */}
       <section className="relative py-16 px-4 bg-gradient-to-r from-amber-50 to-blue-50 z-10">

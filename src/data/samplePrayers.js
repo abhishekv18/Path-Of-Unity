@@ -337,17 +337,5 @@ export const prayerDatabase = [
     timezone: 'Africa/Accra',
     tradition: 'Methodist',
     language: 'English'
-  },
-  {
-    id: 28,
-    category: 'world-peace',
-    text: 'Transform our swords into plowshares and our spears into pruning hooks, that we may cultivate peace instead of war.',
-    country: 'Ethiopia',
-    city: 'Addis Ababa',
-    author: 'Hanna Tadesse',
-    timestamp: new Date('2024-12-01T20:45:00'),
-    timezone: 'Africa/Addis_Ababa',
-    tradition: 'Orthodox',
-    language: 'English'
   }
 ]
