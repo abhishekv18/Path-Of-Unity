@@ -478,13 +478,16 @@ const Hero = () => {
 
         {/* Enhanced Call to Action Buttons */}
         <div className={`flex flex-col sm:flex-row gap-6 mb-16 transform transition-all duration-1000 delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium text-lg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20">
+          <Link to='/contact'>
+            <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium text-lg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20">
             <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-yellow-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <span className="relative flex items-center justify-center gap-2">
               <BookOpen className="w-5 h-5 group-hover:rotate-6 transition-transform" />
               Begin Devotional
             </span>
           </button>
+          </Link>
+        
           <Link to='/contact'>
            <button className="group relative px-8 py-4 bg-white/90 backdrop-blur-sm text-blue-700 font-medium text-lg rounded-xl border border-blue-300/50 overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-400/10">
             <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/10 to-blue-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

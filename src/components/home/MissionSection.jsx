@@ -229,7 +229,7 @@ const MissionSection = () => {
       id: 1,
       icon: Heart,
       title: "Unity in Love",
-      description: "Bridging the gap between Christianity and Hinduism through the universal language of divine love and compassion.",
+      description: "Bridging the gap between Christianity, Hinduism, Islam, Sikhism, and Buddhism through the universal language of divine love, compassion, and unity.",
       color: "from-blue-400 to-blue-600"
     },
     {
@@ -332,8 +332,7 @@ const MissionSection = () => {
             </h2>
             
             <p className="text-base sm:text-lg md:text-xl text-blue-800 max-w-3xl mx-auto leading-relaxed px-2">
-              We believe that all paths to the Divine are sacred. Our mission is to create a harmonious space 
-              where the wisdom of Christianity and Hinduism illuminates the journey for all seekers.
+We believe that all paths to the Divine are sacred. In our space, the wisdom of Sikhism, Islam, Hinduism, Christianity, and Buddhism comes together in harmony—honoring the oneness beyond differences. Each tradition offers unique light: Sikhism’s service, Islam’s devotion, Hinduism’s spiritual depth, Christianity’s love, and Buddhism’s path to inner peace. Together, they guide seekers toward truth, compassion, and unity.
             </p>
           </div>
         </div>
@@ -395,8 +394,7 @@ const MissionSection = () => {
               Join Our Sacred Journey
             </h3>
             <p className="text-blue-700 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed text-sm sm:text-base px-2">
-              Whether you come from a Christian background, Hindu tradition, or are simply seeking spiritual truth, 
-              you are welcome in our community of love and understanding.
+           Whether you come from a Christian, Hindu, Muslim, Sikh, or Buddhist background—or are simply seeking spiritual truth—you are welcome in our community of love, compassion, and understanding.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

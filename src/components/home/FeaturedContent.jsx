@@ -432,7 +432,7 @@ const FeaturedContent = () => {
       type: "blog",
       readTime: "8 min read",
       thumbnail: "/images/images.jpg",
-      description: "Explore how prayer manifests in Christianity, Hinduism, and other spiritual paths, revealing our shared devotion.",
+      description: "Explore how prayer manifests in Christianity, Hinduism, Islam, Sikhism, and Buddhism, revealing the shared devotion that unites all spiritual paths.",
       author: "Raj Patel",
       date: "March 15, 2024",
       category: "Spiritual Practice",
