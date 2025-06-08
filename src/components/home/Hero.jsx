@@ -389,7 +389,7 @@ const Hero = () => {
         {/* Calming Water Video Background */}
         <div className="absolute inset-0 w-full h-full bg-black overflow-hidden">
           <video
-            className="w-full h-full object-cover opacity-95"
+            className="w-full h-full object-cover opacity-100"
             autoPlay
             muted
             loop
@@ -405,7 +405,7 @@ const Hero = () => {
         </div>
         
         {/* White overlay for predominantly white background */}
-        <div className="absolute inset-0 bg-white/80"></div>
+        <div className="absolute inset-0 bg-white/40"></div>
       </div>
 
       {/* Water Surface Effects */}
@@ -456,7 +456,7 @@ const Hero = () => {
         </div>
 
         {/* Enhanced Subtitle */}
-        <p className={`text-xl md:text-2xl lg:text-3xl text-gray-700 mb-12 max-w-3xl mx-auto font-light leading-relaxed transform transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+        <p className={`text-xl md:text-2xl lg:text-3xl text-gray-800 drop-shadow-md mb-12 max-w-3xl mx-auto font-light leading-relaxed transform transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <span className="bg-gradient-to-r from-blue-800 to-gray-800 bg-clip-text text-transparent">
             Finding peace in the presence of the Divine
           </span>
@@ -467,7 +467,7 @@ const Hero = () => {
           <div className="relative bg-white/90 backdrop-blur-sm rounded-xl border border-blue-200/50 shadow-lg p-6">
             <div className="absolute -top-3 -left-3 text-3xl text-blue-400/50">“</div>
             <div className="absolute -bottom-3 -right-3 text-3xl text-blue-400/50">”</div>
-            <p className="text-lg md:text-xl text-gray-700 italic mb-3 transition-all duration-1000 leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-800 drop-shadow-md italic mb-3 transition-all duration-1000 leading-relaxed">
               {christianQuotes[currentQuote].text}
             </p>
             <p className="text-sm md:text-base text-blue-600 font-medium">
@@ -505,7 +505,7 @@ const Hero = () => {
             { icon: <Star className="w-6 h-6 text-yellow-500" />, text: "Bible Studies" },
             { icon: <Heart className="w-6 h-6 text-red-500" />, text: "Prayer Community" }
           ].map((item, index) => (
-            <div key={index} className="bg-white/90 backdrop-blur-sm p-4 rounded-lg border border-blue-200/40 shadow-sm hover:shadow-md transition-shadow">
+            <div key={index} className="bg-white/70 backdrop-blur-sm p-4 rounded-lg border border-blue-200/40 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex flex-col items-center gap-2">
                 <div className="p-3 bg-blue-50 rounded-full">{item.icon}</div>
                 <span className="text-sm font-medium text-gray-700">{item.text}</span>

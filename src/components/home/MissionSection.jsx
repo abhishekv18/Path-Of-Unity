@@ -217,7 +217,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Heart, Star, Globe, Users, Lightbulb, Shield, Sparkles, Sun } from 'lucide-react';
-
+import { Link } from 'react-router-dom';
 const MissionSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [activeCard, setActiveCard] = useState(null);
@@ -400,19 +400,24 @@ const MissionSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="w-full sm:w-auto group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+              <Link to='/contact'>
+                <button className="w-full sm:w-auto group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <span className="relative flex items-center justify-center gap-2">
                   <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
                   Start Your Journey
                 </span>
               </button>
+              </Link>
+            
+              <Link to='/about'>
               <button className="w-full sm:w-auto group px-6 sm:px-8 py-3 sm:py-4 bg-white backdrop-blur-sm text-blue-800 font-semibold rounded-full border border-blue-300 transition-all duration-300 hover:scale-105 hover:bg-yellow-50">
                 <span className="flex items-center justify-center gap-2">
                   <Globe className="w-4 h-4 sm:w-5 sm:h-5" />
                   Learn More
                 </span>
               </button>
+              </Link>
             </div>
           </div>
         </div>

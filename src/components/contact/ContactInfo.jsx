@@ -295,8 +295,8 @@ const ContactInfo = () => {
               </span>
             </h3>
             <p className="text-gray-700 mt-1 text-xs sm:text-sm leading-relaxed break-words">
-              123 Enlightenment Path<br />
-              Harmony Valley, HV 12345<br />
+             International Latily Association<br />
+              {/* Harmony Valley, HV 12345<br /> */}
               <span className="font-semibold" style={{ color: '#3b82f6' }}>United States of Consciousness</span>
             </p>
           </div>
@@ -352,7 +352,7 @@ const ContactInfo = () => {
             <h3 className="text-base sm:text-lg font-semibold text-blue-800">Sacred Messages</h3>
             <p className="text-gray-700 mt-1 text-xs sm:text-sm leading-relaxed break-all">
               <span className="font-semibold">General:</span> I.Laity@yandex.com<br />
-              <span className="font-semibold">Prayers:</span> I.Laity@yandex.com<br />
+              <span className="font-semibold">Prayers:</span> internationallaity.association@gmail.com<br />
               <span className="font-semibold">Donations:</span> I.Laity@yandex.com
             </p>
           </div>

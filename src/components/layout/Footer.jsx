@@ -411,7 +411,8 @@ import React, { useState } from 'react';
 import { 
   Heart, Mail, Phone, MapPin, Facebook, Twitter, Youtube, Instagram, 
   Star, Sparkles, Cross, Church, Scroll, Book, Calendar, Users, 
-  HandHeart, MessageCircle, Gift, HelpCircle, X
+  HandHeart, MessageCircle, Gift, HelpCircle, X,
+  XIcon
 } from 'lucide-react';
 
 const Footer = () => {
@@ -482,10 +483,10 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Facebook, href: "#facebook", name: "Facebook" },
-    { icon: Twitter, href: "#twitter", name: "Twitter" },
+    { icon: Facebook, href: "https://www.facebook.com/share/16eKGCh1L4/", name: "Facebook" },
+    { icon: XIcon, href: " https://x.com/Natalia_149?t=kZNaXiYDVuhloZQEK3i6-w&s=08", name: "Twitter" },
     { icon: Youtube, href: "#youtube", name: "YouTube" },
-    { icon: Instagram, href: "#instagram", name: "Instagram" }
+    { icon: Instagram, href: "https://www.instagram.com/international.laityassociation?igsh=MThid3czOTBzdHM1eA==", name: "Instagram" }
   ];
 
   return (
@@ -531,7 +532,7 @@ const Footer = () => {
                 <div className="space-y-3 text-sm">
                   {[
                     { icon: MapPin, text: "International Latily Association" },
-                    { icon: Mail, text: "I.Laity@yandex.com" },
+                    { icon: Mail, text: "internationallaity.association@gmail.com" },
                     { icon: Phone, text: "+79776235749" }
                   ].map((contact, index) => (
                     <div key={index} className="flex items-center space-x-2">

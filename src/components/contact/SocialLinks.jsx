@@ -137,28 +137,28 @@
 
 
 import React from 'react';
-import { Facebook, Twitter, Instagram, Youtube, Linkedin } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Youtube,  XIcon } from 'lucide-react';
 
 const SocialLinks = () => {
   const socialPlatforms = [
     { 
       name: 'Facebook', 
       icon: Facebook, 
-      url: 'https://facebook.com/laity',
+      url: 'https://www.facebook.com/share/16eKGCh1L4/',
       primaryColor: '#1e3a8a',
       secondaryColor: '#3b82f6'
     },
     { 
       name: 'Twitter', 
-      icon: Twitter, 
-      url: 'https://twitter.com/laity',
+      icon: XIcon, 
+      url: ' https://x.com/Natalia_149?t=kZNaXiYDVuhloZQEK3i6-w&s=08',
       primaryColor: '#1e3a8a',
       secondaryColor: '#3b82f6'
     },
     { 
       name: 'Instagram', 
       icon: Instagram, 
-      url: 'https://instagram.com/laity',
+      url: 'https://www.instagram.com/international.laityassociation?igsh=MThid3czOTBzdHM1eA==',
       primaryColor: '#fbbf24',
       secondaryColor: '#f59e0b'
     },
@@ -168,13 +168,6 @@ const SocialLinks = () => {
       url: 'https://youtube.com/laity',
       primaryColor: '#fbbf24',
       secondaryColor: '#f59e0b'
-    },
-    { 
-      name: 'LinkedIn', 
-      icon: Linkedin, 
-      url: 'https://linkedin.com/company/laity',
-      primaryColor: '#1e3a8a',
-      secondaryColor: '#3b82f6'
     },
   ];
 
