@@ -26,17 +26,17 @@ const AboutPage = () => {
 
   const founders = [
     {
-      name: "Captain Sarah Mitchell",
+      name: "Captain Matinunina Natalia",
       role: "Founder & President",
-      background: "25 years with international airlines",
+      background: "20 years with international airlines",
       faith: "Anglican Christian",
       story: "Inspired by encounters with diverse passengers from all faiths during transcontinental flights"
     },
     {
-      name: "First Officer Maria Santos",
+      name: "Raj Patel",
       role: "Co-Founder & VP",
       background: "Aviation ministry coordinator",
-      faith: "Catholic Christian", 
+      faith: "Hindu Scholar", 
       story: "Witnessed the power of prayer across cultures during emergency situations at 30,000 feet"
     }
   ];
