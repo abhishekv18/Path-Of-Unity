@@ -417,8 +417,8 @@ const Header = () => {
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
   isScrolled 
-    ? 'bg-white/95 backdrop-blur-md shadow-xl border-b border-yellow-200/30' 
-    : 'bg-white/90 backdrop-blur-sm'
+    ? 'bg-white/80 backdrop-blur-lg shadow-lg border-b border-yellow-200/30' 
+    : 'bg-white/30 backdrop-blur-md'
 }`}>
         {/* Spiritual glow effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-yellow-400/5 to-blue-600/5 opacity-0 hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
