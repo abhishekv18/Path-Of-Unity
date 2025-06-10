@@ -532,7 +532,7 @@ const Footer = () => {
                 <div className="space-y-3 text-sm">
                   {[
                     { icon: MapPin, text: "International Latily Association" },
-                    { icon: Mail, text: "internationallaity.association@gmail.com" },
+                    { icon: Mail, text: "I.Laity@yandex.com" },
                     { icon: Phone, text: "+79776235749" }
                   ].map((contact, index) => (
                     <div key={index} className="flex items-center space-x-2">
