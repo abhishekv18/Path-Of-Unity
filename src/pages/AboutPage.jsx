@@ -159,7 +159,7 @@ const AboutPage = () => {
                     //  poster="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=450&fit=crop&crop=face"
                       preload="metadata"
                     >
-                      <source src="/images/WhatsApp Video 2025-06-07 at 07.50.52_f2facfe8.mp4" type="video/mp4" />
+                      <source src="/images/WhatsApp Video 2025-06-17 at 1.07.54 AM.mp4" type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                     
