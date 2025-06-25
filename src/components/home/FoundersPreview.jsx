@@ -250,6 +250,7 @@
 
 import React, { useState } from 'react';
 import { ChevronRight, Heart, Users, Globe, Cross, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 // Founders data (normally imported from data/founders.js)
 const foundersData = {
@@ -432,12 +433,15 @@ const FoundersPreview = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-12">
-          <button className="group bg-gradient-to-r from-blue-600 via-blue-700 to-yellow-500 text-white px-10 py-5 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-300 transition-all duration-500 transform hover:scale-105 border-2 border-transparent hover:border-blue-300">
+        <Link to='/about'>
+        <button className="group bg-gradient-to-r from-blue-600 via-blue-700 to-yellow-500 text-white px-10 py-5 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-300 transition-all duration-500 transform hover:scale-105 border-2 border-transparent hover:border-blue-300">
             <span className="flex items-center gap-3">
               Learn Our Divine Story
               <ChevronRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-500" />
             </span>
           </button>
+        </Link>
+          
         </div>
       </div>
 
