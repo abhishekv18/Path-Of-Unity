@@ -1262,9 +1262,9 @@ const Hero = () => {
                   
                   {/* Enhanced Organization Name */}
                   <div className="text-sm font-bold text-blue-800 text-center leading-tight tracking-wide">
-                    <div className="text-opacity-90">INTERNATIONAL</div>
-                    <div className="text-lg text-opacity-100">LAITY</div>
-                    <div className="text-opacity-90">ASSOCIATION</div>
+                    
+                    <div className="text-xl text-opacity-100">LAITY</div>
+                   
                   </div>
                 </div>
                 
