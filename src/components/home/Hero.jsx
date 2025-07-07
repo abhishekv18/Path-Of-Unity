@@ -1372,7 +1372,7 @@ const Hero = () => {
           className={`group transform transition-all duration-3500 delay-2200 hover:scale-130 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}
           style={{ animation: 'enhancedFloat 5s ease-in-out infinite' }}
         >
-          <div className="relative p-3 sm:p-4 lg:p-6 rounded-full bg-gradient-to-br from-yellow-50/98 to-amber-50/98 backdrop-blur-lg border-2 border-amber-300/70 group-hover:bg-amber-50/99 transition-all duration-500 shadow-2xl group-hover:shadow-3xl">
+          <div className="relative p-2 sm:p-3 lg:p-5 rounded-full bg-gradient-to-br from-yellow-50/98 to-amber-50/98 backdrop-blur-lg border-2 border-amber-300/70 group-hover:bg-amber-50/99 transition-all duration-500 shadow-2xl group-hover:shadow-3xl">
             <ChevronDown className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-blue-700 group-hover:text-blue-800 transition-colors duration-500" />
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-400/20 to-blue-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
