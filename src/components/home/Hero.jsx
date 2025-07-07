@@ -1330,39 +1330,39 @@ const Hero = () => {
         </div>
 
         {/* Enhanced Call to Action Buttons */}
-        <div className={`flex flex-col sm:flex-row gap-12 mb-28 transform transition-all duration-3500 delay-1600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+        <div className={`flex flex-col sm:flex-row gap-6 sm:gap-12 mb-16 sm:mb-28 transform transition-all duration-3500 delay-1600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
           <Link to='/contact'>
-          <button className="group relative px-16 py-8 bg-gradient-to-r from-blue-700 to-blue-800 text-white font-bold text-2xl rounded-full overflow-hidden transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/40 transform-gpu">
+          <button className="group relative px-8 sm:px-12 lg:px-16 py-4 sm:py-6 lg:py-8 bg-gradient-to-r from-blue-700 to-blue-800 text-white font-bold text-lg sm:text-xl lg:text-2xl rounded-full overflow-hidden transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/40 transform-gpu">
             <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-amber-600 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             <div className="absolute inset-0 bg-white/15 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <span className="relative flex items-center gap-5 font-bold tracking-wide">
-              <Sun className="w-8 h-8 group-hover:rotate-180 transition-transform duration-800" />
+            <span className="relative flex items-center gap-3 sm:gap-4 lg:gap-5 font-bold tracking-wide">
+              <Sun className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 group-hover:rotate-180 transition-transform duration-800" />
               Begin Your Journey
-              <Sparkles className="w-7 h-7 group-hover:scale-125 transition-transform duration-500" />
+              <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 group-hover:scale-125 transition-transform duration-500" />
             </span>
           </button>
           </Link>
           <Link to='/teachings'>
-          <button className="group relative px-16 py-8 bg-gradient-to-br from-yellow-50/98 to-amber-50/98 backdrop-blur-lg text-blue-800 font-bold text-2xl rounded-full border-2 border-amber-300/70 overflow-hidden transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-amber-400/30">
+          <button className="group relative px-8 sm:px-12 lg:px-16 py-4 sm:py-6 lg:py-8 bg-gradient-to-br from-yellow-50/98 to-amber-50/98 backdrop-blur-lg text-blue-800 font-bold text-lg sm:text-xl lg:text-2xl rounded-full border-2 border-amber-300/70 overflow-hidden transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-amber-400/30">
             <div className="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-blue-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-            <span className="relative flex items-center gap-5 font-bold tracking-wide">
-              <div className="text-3xl">📖</div>
+            <span className="relative flex items-center gap-3 sm:gap-4 lg:gap-5 font-bold tracking-wide">
+              <div className="text-2xl sm:text-3xl">📖</div>
               Explore Scripture
-              <Eye className="w-7 h-7 group-hover:scale-125 transition-transform duration-500" />
+              <Eye className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 group-hover:scale-125 transition-transform duration-500" />
             </span>
           </button>
           </Link>
         </div>
 
         {/* Enhanced Coming Soon Badge */}
-        <div className={`mb-20 transform transition-all duration-3500 delay-1900 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
-          <div className="inline-flex items-center gap-6 px-12 py-6 bg-gradient-to-br from-yellow-50/98 to-amber-50/98 backdrop-blur-lg rounded-full border-2 border-amber-300/70 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:scale-105">
+        <div className={`mb-12 sm:mb-20 transform transition-all duration-3500 delay-1900 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+          <div className="inline-flex items-center gap-3 sm:gap-4 lg:gap-6 px-6 sm:px-8 lg:px-12 py-3 sm:py-4 lg:py-6 bg-gradient-to-br from-yellow-50/98 to-amber-50/98 backdrop-blur-lg rounded-full border-2 border-amber-300/70 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:scale-105">
             <div className="relative">
-              <div className="w-5 h-5 bg-amber-500 rounded-full" style={{ animation: 'enhancedPulse 3s ease-in-out infinite' }}></div>
-              <div className="absolute inset-0 w-5 h-5 bg-amber-500 rounded-full opacity-60" style={{ animation: 'enhancedExpand 3s ease-in-out infinite' }}></div>
+              <div className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 bg-amber-500 rounded-full" style={{ animation: 'enhancedPulse 3s ease-in-out infinite' }}></div>
+              <div className="absolute inset-0 w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 bg-amber-500 rounded-full opacity-60" style={{ animation: 'enhancedExpand 3s ease-in-out infinite' }}></div>
             </div>
-            <span className="text-blue-800 font-bold text-2xl tracking-wide">Church Opening 2027</span>
-            <div className="text-3xl">⛪</div>
+            <span className="text-blue-800 font-bold text-lg sm:text-xl lg:text-2xl tracking-wide">Church Opening 2027</span>
+            <div className="text-2xl sm:text-3xl">⛪</div>
           </div>
         </div>
 
@@ -1372,11 +1372,12 @@ const Hero = () => {
           className={`group transform transition-all duration-3500 delay-2200 hover:scale-130 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}
           style={{ animation: 'enhancedFloat 5s ease-in-out infinite' }}
         >
-          <div className="relative p-6 rounded-full bg-gradient-to-br from-yellow-50/98 to-amber-50/98 backdrop-blur-lg border-2 border-amber-300/70 group-hover:bg-amber-50/99 transition-all duration-500 shadow-2xl group-hover:shadow-3xl">
-            <ChevronDown className="w-12 h-12 text-blue-700 group-hover:text-blue-800 transition-colors duration-500" />
+          <div className="relative p-3 sm:p-4 lg:p-6 rounded-full bg-gradient-to-br from-yellow-50/98 to-amber-50/98 backdrop-blur-lg border-2 border-amber-300/70 group-hover:bg-amber-50/99 transition-all duration-500 shadow-2xl group-hover:shadow-3xl">
+            <ChevronDown className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-blue-700 group-hover:text-blue-800 transition-colors duration-500" />
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-400/20 to-blue-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
         </button>
+   
       </div>
 
       {/* Enhanced Bottom Gradient */}
